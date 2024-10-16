@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizzaria Online</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .banner {
+            background-image: url(assets/img/1200x400.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .menu-item {
+            margin-bottom: 1.5rem;
+        }
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .menu-item h4 {
+        text-align: center;
+        margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Pizzaria Online</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#menu">Cardápio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#reservas">Reservas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Banner -->
+<div class="banner">
+    <h1 class="highlight">Bem-vindo à Pizzaria Online</h1>
+    <p class="highlight">As melhores pizzas da cidade, prontas para serem reservadas!</p>
+    <a href="#reservas" class="btn btn-primary btn-lg mt-3">Reserve Agora</a>
+</div>
+
+<!-- Cardápio -->
+<section id="menu" class="container my-5">
+    <h2 class="text-center mb-4">Nosso Cardápio</h2>
+    <div class="row">
+        <div class="col-md-4 menu-item">
+            <img src="assets/img/margherita.jpg" alt="Pizza Margherita">
+            <h4>Pizza Margherita</h4>
+            <p>Deliciosa pizza com molho de tomate, mussarela e manjericão fresco.</p>
+            <p><strong>R$ 30,00</strong></p>
+        </div>
+        <div class="col-md-4 menu-item">
+            <img src="assets/img/pepperoni.jpg" alt="Pizza Pepperoni">
+            <h4>Pizza Pepperoni</h4>
+            <p>Molho de tomate, mussarela e pepperoni levemente picante.</p>
+            <p><strong>R$ 35,00</strong></p>
+        </div>
+        <div class="col-md-4 menu-item">
+            <img src="assets/img/calabresa.webp" alt="Pizza Calabresa">
+            <h4>Pizza Calabresa</h4>
+            <p>Molho de tomate, muçarela, calabresa fatiada e orégano fresco.</p>
+            <p><strong>R$ 35,00</strong></p>
+        </div>
+        <div class="col-md-4 menu-item">
+            <img src="assets/img/vegetariana.jpg" alt="Pizza Vegetariana">
+            <h4>Pizza Vegetariana</h4>
+            <p>Molho de tomate, mussarela, pimentões, cebolas e azeitonas.</p>
+            <p><strong>R$ 33,00</strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- Formulário de Reservas -->
+<section id="reservas" class="container my-5">
+    <h2 class="text-center mb-4">Faça sua Reserva</h2>
+    <form id="reservationForm">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="phone">Telefone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Seu telefone" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pizzaType">Escolha sua Pizza</label>
+            <select id="pizzaType" class="form-control" required>
+                <option>Pizza Calabresa</option>
+                <option>Pizza Margherita</option>
+                <option>Pizza Pepperoni</option>
+                <option>Pizza Vegetariana</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="date">Data</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <p><label for="time">Hora</label>
+            <select id="time" class="form-control" required>
+                <option>15:00 pm até 15:30 pm</option>
+                <option>16:00 pm até 16:30 pm</option>
+                <option>17:00 pm até 17:30 pm</option>
+            </select></p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Reservar Agora</button>
+    </form>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="container my-5">
+    <h2 class="text-center mb-4">Entre em Contato</h2>
+    <p class="text-center">Endereço: Rua das Pizzas, 123, Centro</p>
+    <p class="text-center">Telefone: (11) 1234-5678</p>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Pizzaria Online. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Bootstrap and jQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+    document.getElementById('reservationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Obter valores dos campos do formulário
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const pizzaType = document.getElementById('pizzaType').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+
+        // Montar a mensagem
+        const message = `Olá, gostaria de fazer uma reserva de pizza!%0A
+        Nome: ${name}%0A
+        Telefone: ${phone}%0A
+        Pizza: ${pizzaType}%0A
+        Data: ${date}%0A
+        Hora: ${time}`;
+
+        // Substitua '55123456789' pelo seu número de telefone (adicione o código do país, se necessário)
+        const phoneNumber = '557191520124';
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+        // Redirecionar para o WhatsApp
+        window.open(whatsappUrl, '_blank');
+    });
+</script>
+</body>
+</html>
